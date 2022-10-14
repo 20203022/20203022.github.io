@@ -11,7 +11,8 @@
   </style>
   <title>使用一个好点的算法，完善猜数游戏5</title>
  </head>
- <body>
+ <body background
+  ="https://img1.baidu.com/it/u=865002752,4239079237&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
   <p>
    从0到20，请你写下一个数字!<br>
    并如实回答电脑每次猜的偏差，最多5次，就可猜中！
@@ -19,7 +20,7 @@
   <span id="times">第1次</span><h1 id="num">5</h1>
   <input id="small" type="button" value="数字小了">
   <input id="big" type="button" value="数字大了">
-  <input id="restart" type="button" value="再来一局">
+  <input id="restart" type="button" value="重来">
   
     <script type="text/javascript">
   <!--
@@ -61,7 +62,7 @@
    //本例开始，我们要开始逐渐关注函数和变量关系 ，变量使用地问题了，比如本例中，变量num、botNum、topNum、times的定义位置和函数内的使用情况。
      function yourAreCheating(){
 	  if ( times > 5){
-         document.querySelector("h1#num").textContent = "你耍赖了！" ;
+         document.querySelector("h1#num").textContent = "次数用完，请点击重来！" ;
 		  times = 5 ;
 	  }
 	 }

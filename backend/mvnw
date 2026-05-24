@@ -1,0 +1,24 @@
+#!/bin/bash
+# Maven Wrapper startup script
+
+# Locate Java
+if [ -n "$JAVA_HOME" ]; then
+    JAVA_EXE="$JAVA_HOME/bin/java"
+else
+    JAVA_EXE="java"
+fi
+
+# Locate project base
+MAVEN_PROJECTBASEDIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Maven wrapper properties
+WRAPPER_JAR="$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.jar"
+WRAPPER_PROPERTIES="$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.properties"
+
+# If maven not downloaded yet, the wrapper jar will download it
+exec "$JAVA_EXE" \
+    -classpath "$WRAPPER_JAR" \
+    -Dmaven.multiModuleProjectDirectory="$MAVEN_PROJECTBASEDIR" \
+    -Dmaven.wrapper.properties="$WRAPPER_PROPERTIES" \
+    org.apache.maven.wrapper.MavenWrapperMain \
+    "$@"
